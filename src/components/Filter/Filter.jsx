@@ -1,4 +1,3 @@
-import { string } from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { setFilter } from 'redux/contactSlice';
 
