@@ -6,7 +6,6 @@ import { deleteContact } from 'redux/contactSlice';
 export const ContactsList = () => {
   const contacts = useSelector(getContacts);
   const filter = useSelector(getFilter);
-  console.log(contacts);
   return (
     <>
       <ul>

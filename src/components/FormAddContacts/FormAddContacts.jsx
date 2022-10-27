@@ -12,7 +12,6 @@ export const FormAddContacts = ({ inputFunc }) => {
   const contacts = useSelector(getContacts);
 
   const onSubmit = e => {
-    console.log('1');
     e.preventDefault();
     if (contacts && contacts.findIndex(elem => elem.name === name) !== -1) {
       alert('Contact already exists');
