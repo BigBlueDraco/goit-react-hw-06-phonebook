@@ -1,8 +1,11 @@
-import PropTypes from 'prop-types';
+import { string } from 'prop-types';
+import { useDispatch } from 'react-redux';
+import { setFilter } from 'redux/contactSlice';
 
-export const Filter = ({ searcheFunc }) => {
-  return <input type="text" name="filter" onInput={e => searcheFunc(e)} />;
-};
-Filter.propTypes = {
-  searcheFunc: PropTypes.func.isRequired,
+export const Filter = () => {
+  const dispath = useDispatch();
+  const searche = e => {
+    dispath(setFilter(e.target.value.toLowerCase()));
+  };
+  return <input type="text" name="filter" onInput={searche} />;
 };
